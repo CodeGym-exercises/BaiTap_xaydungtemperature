@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let Temperature = function(doC){
+			this.doC = doC;
+			this.convertToF = function() {
+				return (this.doC*1.8) + 32;
+			}
+			this.convertToK = function() {
+				return this.doC +273;
+			}
+			this.display = function(){
+				console.log(doC + " do C = " + this.convertToF() + "(F)"
+					+ this.convertToK() + "(K)")
+			}
+		}
+
+		let currentTem = new Temperature(37);
+		currentTem.display();
+	</script>
+</body>
+</html>
